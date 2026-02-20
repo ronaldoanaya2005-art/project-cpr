@@ -1,0 +1,358 @@
+/* Estilos del detalle de caso: layout, sidebar y mensajes */
+/* ======== LAYOUT GENERAL ======== */
+.case-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 25px;
+}
+
+/* ======== SIDEBAR ======== */
+.case-sidebar {
+    background: #e3f5e6;
+    color: #000;
+    padding: 20px;
+    border-radius: 15px;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.case-sidebar .filter-title,
+.case-sidebar span,
+.case-sidebar label {
+    color: #000 !important;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.filter-title {
+    font-weight: 700;
+    font-size: 16px;
+    color: #2e5a2e;
+}
+
+/* Radios por defecto */
+.check-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 5px;
+}
+
+.case-sidebar select {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #b7dcb9;
+    background: #fff;
+}
+
+/* Input con apariencia de select (solo lectura) */
+.case-sidebar .select-like {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #b7dcb9;
+    background: #fff;
+    color: #000;
+}
+
+.btn-actualizar {
+    padding: 12px 18px;
+    background: #5fbf6e;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: .2s;
+}
+
+.btn-actualizar:hover {
+    background: #4aac5e;
+}
+
+/* ======== PANEL DEL CASO ======== */
+.case-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #cdd8ce;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.case-header {
+    background: #8bcf94;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 700;
+    color: #1b3d1b;
+    text-align: center;
+}
+
+.case-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 12px;
+    background: #fafafa;
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    height: 60vh;
+}
+
+.case-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+/* scrollbar discreta */
+.case-messages::-webkit-scrollbar {
+    width: 6px;
+}
+.case-messages::-webkit-scrollbar-thumb {
+    background: #c5c5c5;
+    border-radius: 4px;
+}
+
+.msg-entry {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.msg-date {
+    font-size: 13px;
+    color: #666;
+}
+
+.msg-user {
+    font-weight: 700;
+    color: #1a4d1a;
+}
+
+.msg-body {
+    color: #333;
+    line-height: 1.5;
+}
+
+.msg-file {
+    margin-top: 5px;
+    background: #e8f4e8;
+    color:#000;
+    padding: 8px;
+    width: fit-content;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.msg-status-change {
+    background: #f1f7ff;
+    padding: 8px;
+    border-radius: 8px;
+    border-left: 3px solid #5b8bd3;
+    font-size: 14px;
+    color: #000;
+}
+
+/* Línea divisoria */
+.divider {
+    width: 100%;
+    height: 1px;
+    background: #ddd;
+}
+
+/* ======== INPUT DE MENSAJE ======== */
+.msg-input-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #ccc;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.msg-input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    outline: none;
+}
+
+.btn-enviar {
+    padding: 10px 20px;
+    background: #5fbf6e;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn-enviar:hover {
+    background: #4aac5e;
+}
+
+.btn-attach {
+    font-size: 22px;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: 0.2s;
+    user-select: none;
+}
+
+/* Aviso de proceso inactivo */
+.text-warning {
+    color: #b00020;
+    display: block;
+    margin-top: 6px;
+    font-size: 13px;
+}
+
+/* Acciones en info */
+.info-actions {
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-editar,
+.btn-editar-sec {
+    background: #5fbf6e;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.btn-editar-sec {
+    background: #3d6d9c;
+}
+
+/* Modal reutilizable */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px 24px;
+    max-width: 520px;
+    width: 92%;
+    color: #000;
+}
+
+.modal-content h3 {
+    margin-top: 0;
+}
+
+.modal-content label {
+    display: block;
+    margin: 10px 0 6px;
+    font-weight: 600;
+}
+
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.btn-guardar {
+    background: #5fbf6e;
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-cerrar {
+    background: #ddd;
+    color: #000;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Historial */
+.historial-lista {
+    max-height: 280px;
+    overflow-y: auto;
+    margin-top: 10px;
+}
+
+.historial-item {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.historial-fecha {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.btn-attach:hover {
+    background: #e0e0e0;
+}
+
+.case-info {
+    background: #f4f8f4;
+    border: 1px solid #d6e4d8;
+    border-radius: 10px;
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    font-size: 14px;
+    color: #000; /* ← TEXTO NEGRO */
+}
+
+.info-item {
+    color: #000;
+}
+
+.info-item strong {
+    color: #1b3d1b;
+    font-weight: 700;
+}
+
+.info-detalles {
+    margin-top: 6px;
+    line-height: 1.5;
+}
