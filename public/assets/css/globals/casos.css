@@ -26,11 +26,13 @@
     padding: 25px;
     border-radius: 15px;
     height: fit-content;
+    width: 280px;
 }
 
 .main-content > .btn-agregar {
     display: block;
     margin-left: auto;
+    margin-right: auto;
     margin-bottom: 16px;
     border-radius: 12px;
     padding: 12px 18px;
@@ -392,13 +394,20 @@
     }
 
     .filters-sidebar {
-        order: 2;
         grid-column: auto;
+        grid-row: auto;
+        width: 100%;
     }
 
     .search-main {
-        order: 1;
         grid-column: auto;
+        grid-row: auto;
+    }
+
+    .main-content > .btn-agregar {
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
